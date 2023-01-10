@@ -55,6 +55,8 @@
 	         alert('비밀번호는 숫자만 가능합니다.');
 	         return false;
 		}
+	      
+	    document.lohinForm.submit(); 
 	}
 
 </script>
@@ -62,8 +64,12 @@
 <body>
 	<form action="result.jsp" name="loginForm" onsubmit="return checkIdPw()">
 		아이디 : <input type="text" name="id"><br><br>
-		비밀번호 : <input type="password" name="pw"><br><br>
-		<input type="submit" value="제출하기">
+		비밀번호 : <input type="text" name="pw"><br><br>
+		<input type="submit" value="제출하기"><br>
+		<input type="button" value="입력하기" onclick="return checkIdPw()"><br><br>
+		<input type="button" value="네이버로가기" onclick="javasceipt:window.location='http://naver.com'">
+		<br>
+		<button onclick="javasceipt:window.location='http://daum.net'">다음으로 가기</button>
 	</form>
 </body>
 </html>
